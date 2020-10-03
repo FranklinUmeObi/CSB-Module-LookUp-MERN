@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname, '../build')));
 
 //Get
 app.get("/", (req, res) => {
+  console.log("Back To Home");
   res.send("We are on home");
 });
 
@@ -36,7 +37,7 @@ app.get("/csb/data", (req, res) => {
       res.status(500).send(err)
       console.log("Something broke when running get");
     } else {
-      console.log("We used get successfully");
+      console.log("We used get data successfully");
       res.status(200).send(data)
     }
   })
@@ -45,7 +46,8 @@ app.get("/csb/data", (req, res) => {
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/../../build/index.html'));
+  console.log("Redirected");
+  res.sendFile(path.join(__dirname+'/../build/index.html'));
 });
 
 
@@ -64,19 +66,6 @@ Post.create(dbData, (err, data) =>
     }
   })
 
-
-// const myPost = new Post({
-//   Courses: req.body.Courses,
-// });
-//
-// myPost
-//   .save()
-//   .then(data => {
-//     res.json(data);
-//   })
-//   .catch(err => {
-//     res.json({message: err});
-//   });
 });
 
 //------------------------------------------------

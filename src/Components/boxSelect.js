@@ -51,7 +51,7 @@ function BoxSelect(props) {
           </Button>
         </div>
 
-        <CardList show={state.listVisibility} course={data} state={state}/>
+        <CardList show={state.listVisibility} data={props.data} state={state}/>
 
       </div>
     );

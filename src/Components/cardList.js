@@ -4,10 +4,14 @@ import "./cardList.css";
 import Card from "./card";
 
 function CardList(props) {
-  const cards = props.course.Courses.map(courseData => (
-    <Card key={courseData.id} id={courseData.id}
-      module={courseData.name} students={courseData.students}
-      state={props.state} />
+  const cards = props.data.map((courseData) => (
+    <Card
+      key={courseData.id}
+      id={courseData.id}
+      module={courseData.name}
+      students={courseData.students}
+      state={props.state}
+    />
   ));
 
   if (props.show === true) {
