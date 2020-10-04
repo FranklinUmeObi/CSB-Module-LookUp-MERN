@@ -17,8 +17,8 @@ const port = process.env.PORT || 3001
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, '../build')));
-
+app.use(express.static(path.join(__dirname, './build')));
+//change to ../build if not using heroku
 
 
 //------------------------------------------------
@@ -47,7 +47,7 @@ app.get("/csb/data", (req, res) => {
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
   console.log("Redirected");
-  res.sendFile(path.join(__dirname+'/../build/index.html'));
+  res.sendFile(path.join(__dirname+'/./build/index.html'));
 });
 
 
