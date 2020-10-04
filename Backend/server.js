@@ -18,11 +18,6 @@ const port = process.env.PORT || 3001
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../build')));
-<<<<<<< Updated upstream
-
-=======
-//change to ../build if not using heroku
->>>>>>> Stashed changes
 
 //------------------------------------------------
 //ROUTES
