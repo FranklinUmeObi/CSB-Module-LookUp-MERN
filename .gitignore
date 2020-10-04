@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+#my secrets
+/Backend/.env
+
+
+
 # testing
 /coverage
 
