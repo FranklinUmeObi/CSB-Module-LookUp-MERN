@@ -29,7 +29,7 @@ function UserSelect(props) {
       </FormControl>
 
       <h3>Select the modules you would like to search below</h3>
-      <BoxSelect semester = {value}/>
+      <BoxSelect semester = {value} data= {props.data}/>
     </div>
 
   );
